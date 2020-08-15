@@ -32,11 +32,7 @@ function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML="Cac
   line-height: 1;
 }
 </style>
-
-<div class="footer">
-  <p>All Credit Goes to Leeful,  Um just Modified The site @hosn30</p>
-</div>
-
+<button onclick="load_fanthresh(); return false"> Set Fan Threshold </button><select id="tempC"></select>&#176;C<br>The PS4's default temp is 79&#176;C
 <script>
 for(var i=40; i<=79; i++){
     var select = document.getElementById("tempC");
@@ -198,5 +194,8 @@ var script = document.createElement('script');script.src = "pl_fanthresh.js";doc
 var script = document.createElement('script');script.src = "exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
 }
 </script>
+<div class="footer">
+  <p>All Credit Goes to Leeful,  Um just Modified The site @hosn30</p>
+</div>
 </body>
 </html>
