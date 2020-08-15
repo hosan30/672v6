@@ -15,7 +15,7 @@
 }
 .button {
   background-color: #003263;  
-  border-radius: spx;
+  border-radius: 5px;
   color: white;
   padding: .5em;
   text-decoration: none;
@@ -29,7 +29,7 @@
   color: White;
 }
 </style>
-<img src="\672v6\0.png"  width="620" height="620" align="right">
+<img src="\672v6\0.png"  width="496" height="620" align="right">
 <script>
 function DLProgress(e){Percent=(Math.round(e.loaded / e.total * 100));window.msgs.innerHTML="Installing Offline Cache: " + Percent + "%";}
 function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML="Cache Installed Successfully";},1000);setTimeout(function(){window.msgs.innerHTML="Now Close And Re-Open Your Browser";},3000);}window.applicationCache.addEventListener("progress",DLProgress,false);window.applicationCache.oncached=function(e){DisplayCacheProgress();};window.applicationCache.onupdateready=function(e){DisplayCacheProgress();};
@@ -38,9 +38,9 @@ function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML="Cac
 <script src="exp_jailbreak.js"></script>
 </head>
 <body style="background-color:white;color:white;line-height:2">
-<h1 id=msgs style='font-size:48px;background-color:#072F5F;'>6.72 Exploit Menu</h1>
-<h1 style='font-size:42px;color:black;line-height:.1'>LOAD JAILBREAK</h1><hr>
-<div style="color:white;font-size:32px">
+<h1 id=msgs style='font-size:38px;background-color:#072F5F;'>6.72 Exploit Menu</h1>
+<h1 style='font-size:28px;color:black;line-height:.1'>LOAD JAILBREAK</h1><hr>
+<div style="color:white;font-size:18px">
 <table align="left" style="width:600px;">
 <tr>
 <td align="center" colspan="2">
@@ -50,7 +50,7 @@ function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML="Cac
 <tr><td><br/></td></tr>
 <br>
 <tr>
-<td colspan="2" align="center"><h1 style='font-size:42px;color:black;line-height:.1'>Payloads</h1></td>
+<td colspan="2" align="center"><h1 style='font-size:28px;color:black;line-height:.1'>Payloads</h1></td>
 </tr>
 <table align="left" style="width:600px;margin-top:15px;">
 <tr>
@@ -63,18 +63,18 @@ function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML="Cac
 </div>
 <script>
 function load_exploit(){
-msgs.innerHTML="<h1 style='font-size:48px;text-align:center;'>Loading Exploit ...</h1>";
+msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Loading Exploit ...</h1>";
 setTimeout(jailbreak,500);
 }
 
 function load_exploit_HEN(){
-msgs.innerHTML="<h1 style='font-size:48px;text-align:center;'>Loading Exploit + HEN ...</h1>";
+msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Loading Exploit + HEN ...</h1>";
 LoadedMSG="Exploit + HEN Loaded ✔";ExploitMira="HEN";MiraSRC="pl_HEN.js";
 setTimeout(jailbreak,500);
 }
 
 function load_exploit_mira(){
-msgs.innerHTML="<h1 style='font-size:48px;text-align:center'>Loading Exploit + Mira ...</h1>";
+msgs.innerHTML="<h1 style='font-size:25px;text-align:center'>Loading Exploit + Mira ...</h1>";
 LoadedMSG="Exploit + Mira Loaded ✔";ExploitMira="yes";MiraSRC="pl_mira.js";
 setTimeout(jailbreak,500);
 }
@@ -176,14 +176,14 @@ var script = document.createElement('script');script.src = "exp_loader.js";docum
 }
 
 function load_updatesdisable(){
-msgs.innerHTML="<h1 style='font-size:48px;text-align:center;'>Loading Disable Updates ...</h1>";
+msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Loading Disable Updates ...</h1>";
 LoadedMSG="Disable Updates Loaded ✔";
 var script = document.createElement('script');script.src = "pl_updatesDisable.js";document.getElementsByTagName('head')[0].appendChild(script);
 var script = document.createElement('script');script.src = "exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
 }
 
 function load_updatesenable(){
-msgs.innerHTML="<h1 style='font-size:48px;text-align:center;'>Loading Enable Updates ...</h1>";
+msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Loading Enable Updates ...</h1>";
 LoadedMSG="Enable Updates Loaded ✔";
 var script = document.createElement('script');script.src = "pl_updatesEnable.js";document.getElementsByTagName('head')[0].appendChild(script);
 var script = document.createElement('script');script.src = "exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
@@ -210,8 +210,8 @@ var script = document.createElement('script');script.src = "pl_fanthresh.js";doc
 var script = document.createElement('script');script.src = "exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
 }
 </script>
-<div class="footer"><h3>
+<div class="footer">
   <p>All Credit Goes to Leeful,  Um just Modified The site @hosn30                 v1.1</p>
-</h3></div>
+</div>
 </body>
 </html>
