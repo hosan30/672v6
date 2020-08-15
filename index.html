@@ -1,25 +1,7 @@
 <html manifest="cache.manifest">
 <head>
 <title>6.72 Exploit Menu By Hosn30 v0.0.1 Beta Test</title>
-<img src="\672v6\0.png"  width="496" height="620" align="right">
-<script>
-function DLProgress(e){Percent=(Math.round(e.loaded / e.total * 100));window.msgs.innerHTML="Installing Offline Cache: " + Percent + "%";}
-function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML="Cache Installed Successfully";},1000);setTimeout(function(){window.msgs.innerHTML="Now Close And Re-Open Your Browser";},3000);}window.applicationCache.addEventListener("progress",DLProgress,false);window.applicationCache.oncached=function(e){DisplayCacheProgress();};window.applicationCache.onupdateready=function(e){DisplayCacheProgress();};
-</script>
-<script src="exp_common.js"></script>
-<script src="exp_jailbreak.js"></script>
-</head>
-<body style="background-color:white;color:white;line-height:2">
-<h1 id=msgs style='font-size:38px;background-color:#072F5F;'>6.72 Exploit Menu</h1>
-<h1 style='font-size:28px;color:black;line-height:.1'>LOAD JAILBREAK</h1><hr>
-<div style="color:black;font-size:18px">
-<br><button onclick="load_exploit_HEN(); return false"> Load Jailbreak + HEN </button>
-<br><br>
-<button onclick="load_exploit_mira(); return false"> Load Jailbreak + Mira </button>
-<br><br>
-<button onclick="load_updatesdisable(); return false";color:red;> Disable Updates </button>
-<button onclick="load_updatesenable(); return false"> Enable Updates </button>
-<br><br><br>
+<meta charset="utf-8"/>
 <style>
 .footer {
   position: fixed;
@@ -31,19 +13,53 @@ function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML="Cac
   text-align: center;
   line-height: 1;
 }
-</style>
-<button onclick="load_fanthresh(); return false"> Set Fan Threshold </button><select id="tempC"></select>&#176;C<br>The PS4's default temp is 79&#176;C
-<script>
-for(var i=40; i<=79; i++){
-    var select = document.getElementById("tempC");
-    var option = document.createElement("OPTION");
-	select.options.add(option);
-	option.text = i;
-	option.value = i;
+.button {
+  background-color: #003263;  
+  border-radius: 5px;
+  color: white;
+  padding: .5em;
+  text-decoration: none;
+  height:100%;
+  display:inline-table;
+  line-height: 1;
 }
-tempC.value=60;
+.button:focus,
+.button:hover {
+  background-color: #007bff;
+  color: White;
+}
+</style>
+<img src="\672v6\0.png"  width="496" height="620" align="right">
+<script>
+function DLProgress(e){Percent=(Math.round(e.loaded / e.total * 100));window.msgs.innerHTML="Installing Offline Cache: " + Percent + "%";}
+function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML="Cache Installed Successfully";},1000);setTimeout(function(){window.msgs.innerHTML="Now Close And Re-Open Your Browser";},3000);}window.applicationCache.addEventListener("progress",DLProgress,false);window.applicationCache.oncached=function(e){DisplayCacheProgress();};window.applicationCache.onupdateready=function(e){DisplayCacheProgress();};
 </script>
+<script src="exp_common.js"></script>
+<script src="exp_jailbreak.js"></script>
+</head>
+<body style="background-color:white;color:white;line-height:2">
+<h1 id=msgs style='font-size:38px;background-color:#072F5F;'>6.72 Exploit Menu</h1>
+<h1 style='font-size:28px;color:black;line-height:.1'>LOAD JAILBREAK</h1><hr>
+<div style="color:white;font-size:18px">
+<table align="left" style="width:600px;">
+<tr>
+<td align="center" colspan="2">
+<a href="#" class="button" button onclick="load_exploit_HEN(); return false" style="width:28%"> Load Jailbreak + HEN </a>  
+<a href="#" class="button" button onclick="load_exploit_mira(); return false"> Load Jailbreak + Mira </a>
+</tr>
+<tr><td><br/></td></tr>
 <br>
+<tr>
+<td colspan="2" align="center"><h1 style='font-size:28px;color:black;line-height:.1'>Payloads</h1></td>
+</tr>
+<table align="left" style="width:600px;margin-top:15px;">
+<tr>
+<td align="center" colspan="2">
+<a href="#" class="button" button onclick="load_updatesdisable(); return false";color:red;> Disable Updates </a>
+<a href="#" class="button" button onclick="load_updatesenable(); return false"> Enable Updates </a>
+</tr>
+<tr><td><br/></td></tr>
+
 </div>
 <script>
 function load_exploit(){
