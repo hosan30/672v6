@@ -1,6 +1,6 @@
-<html manifest="cache.manifest">
+<html manifest="cache.manifest"><!--  -->
 <head>
-<title>6.72 Exploit Menu By Hosn30 v1.1 Beta Test</title>
+<title>6.72 Exploit Menu By Hosn30 v1.2 Beta Test</title>
 <meta charset="utf-8"/>
 <style>
 .footer {
@@ -34,8 +34,7 @@
 function DLProgress(e){Percent=(Math.round(e.loaded / e.total * 100));window.msgs.innerHTML="Installing Offline Cache: " + Percent + "%";}
 function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML="Cache Installed Successfully";},1000);setTimeout(function(){window.msgs.innerHTML="Now Close And Re-Open Your Browser";},3000);}window.applicationCache.addEventListener("progress",DLProgress,false);window.applicationCache.oncached=function(e){DisplayCacheProgress();};window.applicationCache.onupdateready=function(e){DisplayCacheProgress();};
 </script>
-<script src="exp_common.js"></script>
-<script src="exp_jailbreak.js"></script>
+<script src="exp_webkit.js"></script>
 </head>
 <body style="background-color:white;color:white;line-height:2">
 <h1 id=msgs style='font-size:38px;background-color:#072F5F;'>6.72 Exploit Menu</h1>
@@ -44,8 +43,7 @@ function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML="Cac
 <table align="left" style="width:600px;">
 <tr>
 <td align="center" colspan="2">
-<a href="#" class="button" button onclick="load_exploit_HEN(); return false" style="width:28%"> Load Jailbreak + HEN </a>  
-<a href="#" class="button" button onclick="load_exploit_mira(); return false"> Load Jailbreak + Mira </a>
+<a href="#" class="button" button onclick="load_exploit(); return false"> Load Exploit + Hen</a>
 </tr>
 <tr><td><br/></td></tr>
 <br>
@@ -55,61 +53,38 @@ function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML="Cac
 <table align="left" style="width:600px;margin-top:15px;">
 <tr>
 <td align="center" colspan="2">
-<a href="#" class="button" button onclick="load_updatesdisable(); return false";color:red;> Disable Updates </a>
+<a href="#" class="button" button onclick="load_updatesdisable(); return false"> Disable Updates </a>
 <a href="#" class="button" button onclick="load_updatesenable(); return false"> Enable Updates </a>
 </tr>
 <tr><td><br/></td></tr>
-
+</div>
+<br>
 </div>
 <script>
 function load_exploit(){
 msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Loading Exploit ...</h1>";
-setTimeout(jailbreak,500);
+function getScript(source,callback){var gs=document.createElement('script');gs.src=source;gs.onload=callback;gs.async=false;document.body.appendChild(gs);}
+function loadScript(){getScript("exp_kernel.js",function(){setTimeout(jailbreak,500);});}loadScript();
+}
+
+function load_HEN(){
+msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Loading HEN ...</h1>";
+LoadedMSG="HEN Loaded ✔ - Press Circle To Exit";
+function getScript(source,callback){var gs=document.createElement('script');gs.src=source;gs.onload=callback;gs.async=false;document.body.appendChild(gs);}
+function loadScript(){getScript("exp_loaderHEN.js",function(){setTimeout(plLoader,500);});}loadScript();
 }
 
 function load_exploit_HEN(){
-msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Loading Exploit + HEN ...</h1>";
-LoadedMSG="Exploit + HEN Loaded ✔";ExploitMira="HEN";MiraSRC="pl_HEN.js";
-setTimeout(jailbreak,500);
-}
-
-function load_exploit_mira(){
-msgs.innerHTML="<h1 style='font-size:25px;text-align:center'>Loading Exploit + Mira ...</h1>";
-LoadedMSG="Exploit + Mira Loaded ✔";ExploitMira="yes";MiraSRC="pl_mira.js";
-setTimeout(jailbreak,500);
-}
-
-function load_exploit_miraUnoff(){
-msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Loading Exploit + Mira (Unofficial) ...</h1>";
-LoadedMSG="Exploit + Mira Loaded ✔";ExploitMira="yes";MiraSRC="pl_mira_unofficial.js";
-setTimeout(jailbreak,500);
+msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Loading Exploit And HEN ...</h1>";
+LoadedMSG="Exploit And HEN Loaded ✔ - Press Circle To Exit";
+function getScript(source,callback){var gs=document.createElement('script');gs.src=source;gs.onload=callback;gs.async=false;document.body.appendChild(gs);}
+function loadScript(){getScript("exp_kernelHEN.js",function(){setTimeout(jailbreak,500);});}loadScript();
 }
 
 function load_binloader(){
 msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Loading Bin Loader ...</h1>";
 LoadedMSG="Send Payload To Port 9021";
 var script = document.createElement('script');script.src = "exp_BinLoader.js";document.getElementsByTagName('head')[0].appendChild(script);
-}
-
-function load_HEN(){
-msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Loading HEN ...</h1>";
-LoadedMSG="HEN Loaded ✔";
-var script = document.createElement('script');script.src = "pl_HEN.js";document.getElementsByTagName('head')[0].appendChild(script);
-var script = document.createElement('script');script.src = "exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
-}
-
-function load_mira(){
-msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Loading Mira ...</h1>";
-LoadedMSG="Mira Loaded ✔";
-var script = document.createElement('script');script.src = "pl_mira.js";document.getElementsByTagName('head')[0].appendChild(script);
-var script = document.createElement('script');script.src = "exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
-}
-
-function load_mira_unofficial(){
-msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Loading Mira ...</h1>";
-LoadedMSG="Mira Loaded ✔";
-var script = document.createElement('script');script.src = "pl_mira_unofficial.js";document.getElementsByTagName('head')[0].appendChild(script);
-var script = document.createElement('script');script.src = "exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
 }
 
 function load_ftp(){
@@ -210,8 +185,5 @@ var script = document.createElement('script');script.src = "pl_fanthresh.js";doc
 var script = document.createElement('script');script.src = "exp_loader.js";document.getElementsByTagName('head')[0].appendChild(script);
 }
 </script>
-<div class="footer">
-  <p>All Credit Goes to Leeful,  Um just Modified The site @hosn30                 v1.1</p>
-</div>
 </body>
 </html>
